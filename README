@@ -1,20 +1,4 @@
-dwm - dynamic window manager
-============================
-dwm is an extremely fast, small, and dynamic window manager for X.
-
-
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
-
-
-Installation
-------------
+Installation:
 git clone https://gitlab.com/vu20022012/dwm .dwm
 cd .dwm
 sudo make clean install
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
