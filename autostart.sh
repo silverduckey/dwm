@@ -1,4 +1,5 @@
 #!/bin/bash
+killall screenkey
 killall volumeicon
 killall ibus-daemon
 xrandr -s 1360x768 &
@@ -7,4 +8,5 @@ picom &
 lxsession &
 dwmblocks &
 volumeicon &
-ibus start
+ibus start &
+screenkey --start-disabled
