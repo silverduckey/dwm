@@ -6,4 +6,4 @@ picom &
 lxsession &
 dwmblocks &
 volumeicon &
-ibus start &
+ibus start
