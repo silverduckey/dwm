@@ -95,16 +95,15 @@ static const char *dmenucmd[] = {"dmenu_run", "-i",      "-m",  dmenumon,
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"brave", NULL};
 static const char *editorcmd[] = {"st", "-e", "nvim", NULL};
-static const char *logoutmenu[] = {"dm-logout", NULL};
+static const char *logoutmenucmd[] = {"dm-logout", NULL};
 static const char *hubcmd[] = {"dm-hub", NULL};
 
 static const Key keys[] = {
-    /* modifier                     key        function        argument */
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
     {MODKEY, XK_v, spawn, {.v = editorcmd}},
-    {MODKEY, XK_q, spawn, {.v = logoutmenu}},
+    {MODKEY, XK_q, spawn, {.v = logoutmenucmd}},
     {MODKEY, XK_s, spawn, {.v = hubcmd}},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
