@@ -96,7 +96,6 @@ static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"brave", NULL};
 static const char *editorcmd[] = {"st", "-e", "nvim", NULL};
 static const char *logoutmenucmd[] = {"dm-logout", NULL};
-static const char *hubcmd[] = {"dm-hub", NULL};
 
 static const Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = dmenucmd}},
@@ -104,7 +103,6 @@ static const Key keys[] = {
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
     {MODKEY, XK_v, spawn, {.v = editorcmd}},
     {MODKEY, XK_q, spawn, {.v = logoutmenucmd}},
-    {MODKEY, XK_s, spawn, {.v = hubcmd}},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
