@@ -1,4 +1,0 @@
-Installation:
-git clone https://gitlab.com/vu20022012/dwm .dwm
-cd .dwm
-sudo make clean install
