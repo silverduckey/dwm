@@ -85,23 +85,28 @@ static const Layout layouts[] = {
     .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
   }
 
+#define TERMINAL "st"
+#define BROWSER "brave"
+#define LAUNCHER "dmenu_run -i"
+#define POWERMENU "$HOME/.dwm/scripts/powermenu"
+#define EDITOR "nvim"
+
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"dmenu_run", "-i",      "-m",  dmenumon,
+static const char *dmenucmd[] = {LAUNCHER, "-i",      "-m",  dmenumon,
                                  "-fn",       dmenufont, "-nb", col_gray1,
                                  "-nf",       col_gray3, "-sb", col_gray5,
                                  "-sf",       col_gray4, NULL};
-static const char *termcmd[] = {"st", NULL};
-static const char *browsercmd[] = {"brave", NULL};
-static const char *editorcmd[] = {"st", "-e", "nvim", NULL};
-
+static const char *termcmd[] = {TERMINAL, NULL};
+static const char *browsercmd[] = {BROWSER, NULL};
+static const char *editorcmd[] = {TERMINAL, "-e", EDITOR, NULL};
 static const Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
     {MODKEY, XK_v, spawn, {.v = editorcmd}},
-    {MODKEY, XK_q, spawn, SHCMD("$HOME/.dwm/scripts/powermenu")},
+    {MODKEY, XK_q, spawn, SHCMD(POWERMENU)},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
