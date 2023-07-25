@@ -101,6 +101,7 @@ static const Key keys[] = {
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
     {MODKEY, XK_v, spawn, {.v = editorcmd}},
+    {MODKEY, XK_q, spawn, SHCMD("$HOME/.dwm/scripts/powermenu")},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
