@@ -11,7 +11,7 @@ declare -a options=(
 choice=$(printf "%s\n" "${options[@]}" | dmenu -i -p "Shutdown menu:")
 
 case $choice in
-"Logout")
+"Log out")
     if [[ "$(echo -e "No\nYes" | dmenu -i -p "${choice}?" "${@}")" == "Yes" ]]; then
         killall dwm
     else
