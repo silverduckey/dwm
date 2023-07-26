@@ -87,7 +87,7 @@ static const Layout layouts[] = {
 
 #define TERMINAL "st"
 #define BROWSER "brave"
-#define LAUNCHER "dmenu_run -i"
+#define LAUNCHER "dmenu_run"
 #define POWERMENU "$HOME/.dwm/scripts/powermenu"
 #define EDITOR "nvim"
 
