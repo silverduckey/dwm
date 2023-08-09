@@ -19,11 +19,11 @@ static const int showbar = 1;
 static const int topbar = 1;
 static const char *fonts[] = {"Ubuntu Nerd Font:pixelsize=14"};
 static const char dmenufont[] = "Ubuntu Nerd Font:pixelsize=14";
-static const char col_gray1[] = "#2e3440";
-static const char col_gray2[] = "#2e3440";
+static const char col_gray1[] = "#3b4252";
+static const char col_gray2[] = "#3b4252";
 static const char col_gray3[] = "#d8dee9";
-static const char col_gray4[] = "#d8dee9";
-static const char col_gray5[] = "#3b4252";
+static const char col_gray4[] = "#88c0d0";
+static const char col_gray5[] = "#4c566a";
 static const char *colors[][3] = {
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
     [SchemeSel] = {col_gray4, col_gray5, col_gray5},
