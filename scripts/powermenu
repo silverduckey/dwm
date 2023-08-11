@@ -12,7 +12,7 @@ choice=$(printf "%s\n" "${options[@]}" | dmenu -i -p "Shutdown menu:")
 
 case $choice in
 "Log out")
-    if [[ "$(echo -e "No\nYes" | dmenu -i -p "${choice}?" "${@}")" == "Yes" ]]; then
+    if [[ "$(echo -e "No\nYes" | dmenu -p "${choice}?" "${@}")" == "Yes" ]]; then
         killall dwm
     else
         output "User chose not to logout." && exit 1

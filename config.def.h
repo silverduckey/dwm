@@ -18,7 +18,6 @@ static const int showsystray = 1;
 static const int showbar = 1;
 static const int topbar = 1;
 static const char *fonts[] = {"Ubuntu Nerd Font:pixelsize=14"};
-static const char dmenufont[] = "Ubuntu Nerd Font:pixelsize=14";
 static const char col_gray1[] = "#3b4252";
 static const char col_gray2[] = "#3b4252";
 static const char col_gray3[] = "#d8dee9";
@@ -31,9 +30,9 @@ static const char *colors[][3] = {
 
 static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
-static const Rule rules[] = {
-    {"Gimp", NULL, NULL, 0, 1, -1},
-    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
+static Rule rules[] = {
+    /* class      instance    title       tags mask     isfloating   monitor */
+    {NULL, NULL, NULL, 0, False, -1},
 };
 
 static const float mfact = 0.50;
@@ -64,24 +63,19 @@ static const Layout layouts[] = {
   }
 
 #define TERMINAL "st"
-#define BROWSER "brave"
-#define LAUNCHER "dmenu_run"
-#define POWERMENU "$HOME/.dwm/scripts/powermenu"
 #define EDITOR "nvim"
 
 static char dmenumon[2] = "0";
-static const char *dmenucmd[] = {
-    LAUNCHER, "-i",      "-m",  dmenumon,  "-fn", dmenufont, "-nb", col_gray1,
-    "-nf",    col_gray3, "-sb", col_gray5, "-sf", col_gray4, NULL};
 static const char *termcmd[] = {TERMINAL, NULL};
-static const char *browsercmd[] = {BROWSER, NULL};
+static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *editorcmd[] = {TERMINAL, "-e", EDITOR, NULL};
+static const char *browsercmd[] = {"brave", NULL};
 static const Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, spawn, {.v = browsercmd}},
     {MODKEY, XK_v, spawn, {.v = editorcmd}},
-    {MODKEY, XK_q, spawn, SHCMD(POWERMENU)},
+    {MODKEY, XK_q, spawn, SHCMD("$HOME/.dwm/scripts/powermenu")},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_j, rotatestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, rotatestack, {.i = -1}},
