@@ -2314,7 +2314,7 @@ updategeom(void)
 				m->clients = c->next;
 				detachstack(c);
 				c->mon = mons;
-				attachaside(c);
+                attachaside(c);
 				attachstack(c);
 			}
 			if (m == selmon)
