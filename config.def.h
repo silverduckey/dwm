@@ -37,7 +37,7 @@ static Rule rules[] = {
 
 static const float mfact = 0.50;
 static const int nmaster = 1;
-static const int resizehints = 1;
+static const int resizehints = 0;
 static const int attachdirection = 2;
 static const int lockfullscreen = 1;
 #define FORCE_VSPLIT 1
