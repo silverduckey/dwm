@@ -1,33 +1,19 @@
 #!/usr/bin/env bash
 
-declare -a options=(
-    "Log out"
-    "Lock screen"
-    "Reboot"
-    "Poweroff"
-)
-
-choice=$(printf "%s\n" "${options[@]}" | dmenu -p "Shutdown menu:")
-confirmation="Are you sure ? [y/N]"
-
-case $choice in
-"Log out")
-    if [[ "$(echo -e "No\nYes" | dmenu -p "$confirmation" "${@}")" == "Yes" ]]; then
-        killall dwm
+selected_option=$(echo -e "Shutdown\nReboot\nSuspend\nLogout\nLock screen" | dmenu -p "Power Menu")
+if [[ $selected_option != "Lock screen" ]]; then
+    confirm_option=$(echo -e "Yes\nNo" | dmenu -p "Confirm Action")
+    if [[ $confirm_option == "Yes" ]]; then
+        if [[ $selected_option == "Shutdown" ]]; then
+            loginctl poweroff
+        elif [[ $selected_option == "Reboot" ]]; then
+            loginctl reboot
+        elif [[ $selected_option == "Suspend" ]]; then
+            loginctl suspend
+        elif [[ $selected_option == "Logout" ]]; then
+            killall dwm
+        fi
     fi
-    ;;
-"Lock screen")
+elif [[ $selected_option == "Lock screen" ]]; then
     slock
-    ;;
-"Reboot")
-    if [[ "$(echo -e "No\nYes" | dmenu -p "$confirmation" "${@}")" == "Yes" ]]; then
-        loginctl reboot
-    fi
-    ;;
-"Poweroff")
-    if [[ "$(echo -e "No\nYes" | dmenu -p "$confirmation" "${@}")" == "Yes" ]]; then
-        loginctl poweroff
-    fi
-    ;;
-
-esac
+fi
