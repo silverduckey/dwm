@@ -1,7 +1,7 @@
 #!/bin/bash
 killall volumeicon
 slstatus &
-xrandr -s 1360x768 &
+$HOME/.screenlayout/screenlayout.sh
 feh --bg-fill --randomize ~/.wallpapers &
 picom &
 lxsession &
