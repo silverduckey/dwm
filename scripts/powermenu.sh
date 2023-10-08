@@ -5,11 +5,11 @@ if [[ $selected_option != "Lock screen" ]]; then
     confirm_option=$(echo -e "Yes\nNo" | dmenu -p "Confirm Action")
     if [[ $confirm_option == "Yes" ]]; then
         if [[ $selected_option == "Shutdown" ]]; then
-            loginctl poweroff
+            systemctl poweroff
         elif [[ $selected_option == "Reboot" ]]; then
-            loginctl reboot
+            systemctl reboot
         elif [[ $selected_option == "Suspend" ]]; then
-            loginctl suspend
+            systemctl suspend
         elif [[ $selected_option == "Logout" ]]; then
             killall dwm
         fi
