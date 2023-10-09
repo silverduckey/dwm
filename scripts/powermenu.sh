@@ -1,19 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-selected_option=$(echo -e "Shutdown\nReboot\nSuspend\nLogout\nLock screen" | dmenu -p "Power Menu")
-if [[ $selected_option != "Lock screen" ]]; then
-    confirm_option=$(echo -e "Yes\nNo" | dmenu -p "Confirm Action")
-    if [[ $confirm_option == "Yes" ]]; then
-        if [[ $selected_option == "Shutdown" ]]; then
+selected_option=$(printf "Shutdown\nReboot\nSuspend\nLogout\nLock screen" | dmenu -p "Power Menu")
+if [ "$selected_option" != "Lock screen" ]; then
+    confirm_option=$(printf "Yes\nNo" | dmenu -p "Confirm Action")
+    if [ "$confirm_option" = "Yes" ]; then
+        if [ "$selected_option" = "Shutdown" ]; then
             systemctl poweroff
-        elif [[ $selected_option == "Reboot" ]]; then
+        elif [ "$selected_option" = "Reboot" ]; then
             systemctl reboot
-        elif [[ $selected_option == "Suspend" ]]; then
+        elif [ "$selected_option" = "Suspend" ]; then
             systemctl suspend
-        elif [[ $selected_option == "Logout" ]]; then
+        elif [ "$selected_option" = "Logout" ]; then
             killall dwm
         fi
     fi
-elif [[ $selected_option == "Lock screen" ]]; then
+elif [ "$selected_option" = "Lock screen" ]; then
     slock
 fi
