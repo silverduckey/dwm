@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 killall picom
 killall lxsession
 killall ibus-daemon
