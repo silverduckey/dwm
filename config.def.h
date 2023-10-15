@@ -16,15 +16,15 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Ubuntu Nerd Font:size=10" };
-static const char col_gray1[]       = "#3b4252";
-static const char col_gray2[]       = "#3b4252";
-static const char col_gray3[]       = "#d8dee9";
-static const char col_gray4[]       = "#4c566a";
-static const char col_cyan[]        = "#88c0d0";
+static const char col_gray1[]       = "#1f1d2e";
+static const char col_gray2[]       = "#1f1d2e";
+static const char col_gray3[]       = "#908caa";
+static const char col_gray4[]       = "#26233a";
+static const char col_gray5[]       = "#e0def4";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_cyan, col_gray4,  col_gray4  },
+	[SchemeSel]  = { col_gray5, col_gray4,  col_gray4  },
 };
 
 /* tagging */
