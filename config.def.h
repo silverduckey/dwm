@@ -27,6 +27,15 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_green, col_gray4,  col_gray4  },
 };
 
+static const char *const autostart[] = {
+    "picom", NULL,
+    "sh", ".", "$HOME/.screenlayout/screenlayout.sh", NULL,
+    "feh", "--bg-fill", "--randomize", "$HOME/.wallpapers/", NULL,
+    "slstatus", NULL,
+    "ibus", "start", NULL,
+	NULL /* terminate */
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
