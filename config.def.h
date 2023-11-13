@@ -19,12 +19,12 @@ static const char *fonts[]          = { "Ubuntu Nerd Font:size=10" };
 static const char col_gray1[]       = "#1e1e2e";
 static const char col_gray2[]       = "#1e1e2e";
 static const char col_gray3[]       = "#cdd6f4";
-static const char col_gray4[]       = "#45475a";
-static const char col_green[]       = "#a6e3a1";
+static const char col_gray4[]       = "#1e1e2e";
+static const char col_blue[]        = "#89dceb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_green, col_gray4,  col_gray4  },
+	[SchemeSel]  = { col_gray4, col_blue,  col_blue  },
 };
 
 /* tagging */
