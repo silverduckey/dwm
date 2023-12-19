@@ -90,6 +90,7 @@ static const char *dmenucmd[] = { "", NULL };
 static const char *dmenu_runcmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
+static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 
 #include "movestack.c"
 #include "exitdwm.c"
@@ -99,6 +100,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenu_runcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = screenshotcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
