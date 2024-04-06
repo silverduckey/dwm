@@ -1,11 +1,11 @@
 #!/bin/sh
-killall compfy
+killall picom
 killall lxsession
 killall ibus-daemon
 killall slstatus
 . $HOME/.screenlayout/screenlayout.sh
 slstatus &
 feh --bg-fill --randomize $HOME/.wallpapers &
-compfy &
+picom &
 lxsession &
 ibus start
