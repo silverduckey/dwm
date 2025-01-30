@@ -6,6 +6,6 @@ killall slstatus
 . $HOME/.screenlayout/screenlayout.sh
 slstatus &
 feh --bg-fill --randomize $HOME/.wallpapers &
-picom &
+picom -b &
 lxsession &
 ibus start
