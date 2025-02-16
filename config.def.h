@@ -19,7 +19,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 #define ICONSIZE 16   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
-static const char *fonts[]          = { "Ubuntu Nerd Font Propo:size=10" };
+static const char *fonts[]          = { "Ubuntu Nerd Font Propo:pixelsize=12" };
 static const char col_gray1[]       = "#1e1e2e";
 static const char col_gray2[]       = "#1e1e2e";
 static const char col_gray3[]       = "#cdd6f4";
