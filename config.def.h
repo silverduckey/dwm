@@ -19,7 +19,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 #define ICONSIZE 16   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
-static const char *fonts[]          = { "Ubuntu Nerd Font:size=10" };
+static const char *fonts[]          = { "Ubuntu Nerd Font Propo:size=10" };
 static const char col_gray1[]       = "#1e1e2e";
 static const char col_gray2[]       = "#1e1e2e";
 static const char col_gray3[]       = "#cdd6f4";
@@ -89,7 +89,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "", NULL };
 static const char *dmenu_runcmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[]  = { "firefox", NULL };
+static const char *browsercmd[]  = { "librewolf", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 
 #include "movestack.c"
