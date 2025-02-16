@@ -2,10 +2,14 @@
 killall picom
 killall lxsession
 killall ibus-daemon
+killall volumeicon
+killall nm-applet
 killall slstatus
 . $HOME/.screenlayout/screenlayout.sh
-slstatus &
 feh --bg-fill --randomize $HOME/.wallpapers &
 picom -b &
 lxsession &
-ibus start
+ibus-daemon -d &
+volumeicon &
+nm-applet &
+slstatus &
