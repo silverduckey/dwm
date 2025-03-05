@@ -4,6 +4,7 @@ killall lxsession
 killall nm-applet
 killall volctl
 killall ibus-daemon
+killall flameshot
 killall slstatus
 . $HOME/.screenlayout/screenlayout.sh
 feh --bg-fill --randomize $HOME/.wallpapers &
@@ -12,4 +13,5 @@ lxsession &
 nm-applet &
 volctl &
 ibus-daemon -d &
+flameshot &
 slstatus &
