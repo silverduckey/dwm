@@ -3,7 +3,7 @@
 :CUSTOM_ID: installation
 :END:
 #+begin_example
-git clone https://gitlab.com/vudangxyz/dwm ~/.dwm
+git clone https://github.com/silverduckey/dwm.git .dwm
 cd ~/.dwm
 sudo make clean install
 #+end_example
