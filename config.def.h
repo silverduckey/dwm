@@ -29,15 +29,14 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"sh", "-c", "/home/silduck/.screenlayout/screenlayout.sh", NULL,
-	"feh", "--bg-fill", "--randomize", "--recursive", "/usr/share/backgrounds/", NULL,
+	"sh", "-c", "sleep 3 ; feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
 	"picom", "-b", NULL,
 	"lxsession", NULL,
 	"nm-applet", NULL,
 	"volctl", NULL,
 	"ibus", "start", NULL,
 	"flameshot", NULL,
-	"conky", NULL,
+	"sh", "-c", "sleep 3 ; conky -U", NULL,
 	"slstatus", NULL,
 	NULL /* terminate */
 };
