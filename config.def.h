@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"sh", "-c", "/home/silduck/.screenlayout/screenlayout.sh", NULL,
-	"feh", "--bg-fill", "--randomize", "--recursive", "/usr/share/backgrounds/", "/usr/share/wallpapers/", NULL,
+	"feh", "--bg-fill", "--randomize", "--recursive", "/usr/share/backgrounds/", NULL,
 	"picom", "-b", NULL,
 	"lxsession", NULL,
 	"nm-applet", NULL,
@@ -64,11 +64,11 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
 	// { "[@]",      spiral },
-	// { "[\\]",     dwindle },
+	{ "[\\]",     dwindle },
 	// { "H[]",      deck },
 	// { "TTT",      bstack },
 	// { "===",      bstackhoriz },
-	{ "HHH",      grid },
+	// { "HHH",      grid },
 	// { "###",      nrowgrid },
 	// { "---",      horizgrid },
 	// { ":::",      gaplessgrid },
@@ -141,7 +141,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_d,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
