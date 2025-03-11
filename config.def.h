@@ -29,14 +29,14 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"sh", "-c", "sleep 3 ; feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
+	"sh", "-c", "sleep 5 ; feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
+	"sh", "-c", "sleep 5 ; conky -U", NULL,
 	"picom", "-b", NULL,
 	"lxsession", NULL,
 	"nm-applet", NULL,
 	"volctl", NULL,
 	"ibus", "start", NULL,
 	"flameshot", NULL,
-	"sh", "-c", "sleep 3 ; conky -U", NULL,
 	"slstatus", NULL,
 	NULL /* terminate */
 };
@@ -50,10 +50,11 @@ static Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const float mfact     = 0.5;   /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 1;     /* number of clients in master area */
+static const int resizehints = 1;     /* 1 means respect size hints in tiled resizals */
+static const int attachdirection = 1; /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
+static const int lockfullscreen = 1;  /* 1 will force focus on the fullscreen window */
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
