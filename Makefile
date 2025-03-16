@@ -40,6 +40,8 @@ install: all
 	mkdir -p /usr/share/xsessions
 	cp -f dwm.desktop /usr/share/xsessions
 	chmod 644 /usr/share/xsessions/dwm.desktop
+	cp -f layoutmenu.sh ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/layoutmenu.sh
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
