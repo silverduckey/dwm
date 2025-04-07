@@ -104,7 +104,7 @@ static const char *dmenucmd[] = { "dmenu_run_desktop", "-m", dmenumon, NULL };
 static const char *dmenu_runcmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *editorcmd[]  = { "neovide", NULL };
-static const char *browsercmd[]  = { "zen-browser", NULL };
+static const char *browsercmd[]  = { "floorp", NULL };
 static const char *layoutmenu_cmd = "layoutmenu.sh";
 
 #include "movestack.c"
