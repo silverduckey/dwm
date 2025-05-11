@@ -32,8 +32,8 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"sh", "-c", "sleep 5 ; feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
-	"sh", "-c", "sleep 5 ; conky -U", NULL,
+	"feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
+	"conky -U", NULL,
 	"redshift", "-O", "4800K", NULL,
 	"picom", "-b", NULL,
 	"lxsession", NULL,
