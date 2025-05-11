@@ -34,7 +34,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
 	"sh", "-c", "sleep 5 ; feh --bg-fill --randomize --recursive /usr/share/backgrounds/", NULL,
 	"sh", "-c", "sleep 5 ; conky -U", NULL,
-    "redshift", "-O", "4800K", NULL,
+	"redshift", "-O", "4800K", NULL,
 	"picom", "-b", NULL,
 	"lxsession", NULL,
 	"nm-applet", NULL,
@@ -104,7 +104,7 @@ static const char *dmenucmd[] = { "dmenu_run_desktop", "-m", dmenumon, NULL };
 static const char *dmenu_runcmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *editorcmd[]  = { "neovide", NULL };
-static const char *browsercmd[]  = { "floorp", NULL };
+static const char *browsercmd[]  = { "chromium", NULL };
 static const char *layoutmenu_cmd = "layoutmenu.sh";
 
 #include "movestack.c"
